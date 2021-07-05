@@ -1,0 +1,6 @@
+framework module Pods_NormalSourceAPP {
+  umbrella header "Pods-NormalSourceAPP-umbrella.h"
+
+  export *
+  module * { export * }
+}
