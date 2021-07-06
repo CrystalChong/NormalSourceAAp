@@ -121,8 +121,8 @@
 		664759082693F88400D1408D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				6647590A2693F8A000D1408D /* View */,
 				664759092693F89800D1408D /* Controller */,
+				6647590A2693F8A000D1408D /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
