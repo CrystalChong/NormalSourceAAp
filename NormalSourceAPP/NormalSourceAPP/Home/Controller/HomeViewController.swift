@@ -1,13 +1,14 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  NormalSourceAPP
 //
-//  Created by Sunfairy136 on 2021/7/5.
+//  Created by Sunfairy136 on 2021/7/6.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
    
     var _tableView:UITableView?
     
@@ -21,9 +22,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         _tableView?.rowHeight = UITableView.automaticDimension;
         self.view.addSubview(_tableView!);
     }
-    // MARK: 数据源
+    
+    // MARK: - 说明文字,带分割线
+    // MARK: 说明文字,不带分割线
+    //TODO: 需要提醒的文字
+    //FIXME: 需要修改bug的相关说明
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // FIXME: 标记 此处为数据库数据
         return 10;
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,5 +41,5 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
     }
 
-}
 
+}
