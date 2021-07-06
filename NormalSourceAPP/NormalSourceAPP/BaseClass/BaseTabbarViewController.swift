@@ -32,7 +32,6 @@ class BaseTabbarViewController: UITabBarController , UITabBarControllerDelegate{
         let nav = BaseNavgationController.init(rootViewController: HomeViewController());
         nav.tabBarItem.image = UIImage.init(named: "jinianri_Nose")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal);
         nav.tabBarItem.selectedImage = UIImage.init(named: "jinianri")?.withRenderingMode(.alwaysOriginal);
-        
         nav.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
         nav.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.colorWithHexString("#14C3A9")], for: .selected)
         return nav;
