@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.white
-        self.window?.rootViewController = HomeViewController()
+        self.window?.rootViewController = BaseTabbarViewController();
+        //BaseNavgationController.init(rootViewController: HomeViewController());
         self.window?.makeKeyAndVisible()
         
         return true

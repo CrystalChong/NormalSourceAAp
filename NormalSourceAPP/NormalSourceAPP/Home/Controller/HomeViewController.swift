@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+
+class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
    
     var _tableView:UITableView?
     
@@ -16,6 +17,9 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // .title = "文字";
+//        self.navigationController?.tabBarController?.tabBarItem.title = "首页";
+        self.setTitle(text: "文字")
         _tableView = UITableView.init(frame: self.view.bounds, style: UITableView.Style.plain);
         _tableView?.delegate = self;
         _tableView?.dataSource = self;
