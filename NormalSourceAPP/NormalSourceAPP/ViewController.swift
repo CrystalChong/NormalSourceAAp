@@ -30,7 +30,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let cellID  = "dirayCellID"
         var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
         if cell == nil {
-            cell = HomeDescribeCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: cellID)
+            cell = DIHomeDescribeCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: cellID)
         }
         
         return cell!;

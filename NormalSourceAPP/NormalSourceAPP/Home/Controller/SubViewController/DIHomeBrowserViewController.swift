@@ -1,19 +1,24 @@
 //
-//  HomeViewController.swift
+//  HomeBrowserViewController.swift
 //  NormalSourceAPP
 //
-//  Created by Sunfairy136 on 2021/7/6.
+//  Created by Sunfairy136 on 2021/7/7.
 //
 
 import Foundation
 import UIKit
 
-
-class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
-   
+class DIHomeBrowserViewController : BaseViewController,UITableViewDelegate,UITableViewDataSource, classa{
+    
+    func attendance() -> String {
+        return "asdasdas"
+    }
+    
+    func markssecured() -> String {
+        return "asdasd"
+    }
+    
     var _tableView:UITableView?
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,12 +43,21 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         let cellID  = "dirayCellID"
         var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
         if cell == nil {
-            cell = HomeDescribeCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: cellID)
+            cell = DIHomeDescribeCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: cellID)
+            
         }
+        let ce = cell as! DIHomeDescribeCell;
+        ce.ss = self;
         
         return cell!;
         
     }
-
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        
+    }
+    
+    
 }
+
+

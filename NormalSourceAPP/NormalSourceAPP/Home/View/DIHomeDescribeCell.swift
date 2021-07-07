@@ -8,11 +8,30 @@
 import UIKit
 import SnapKit
 
-class HomeDescribeCell: UITableViewCell {
+protocol classa : NSObjectProtocol {
+    
+//    var marks: Int { get set }
+//    var result: Bool { get }
+    
+    func attendance() -> String
+    func markssecured() -> String
+    
+}
+
+//protocol classb : classa {
+//
+//    var present: Bool { get set }
+//    var subject: String { get set }
+//    var stname: String { get set }
+//
+//}
+
+class DIHomeDescribeCell: UITableViewCell {
     
     var _desLabel:UILabel?
     lazy var _box = UIView()
     lazy var _titleLabel = UILabel()
+    weak var ss:classa?
     
     
     override func awakeFromNib() {
@@ -72,8 +91,18 @@ class HomeDescribeCell: UITableViewCell {
             make.bottom.equalTo(_box.snp.bottom).offset(-15);
         })
         
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(test))
+        _desLabel?.isUserInteractionEnabled = true;
+        _desLabel?.addGestureRecognizer(tap);
         
         
+        
+    }
+    @objc func test()  {
+        if self.ss != nil { // && self.ss?.responds(to: #selector(self.ss?.attendance))
+           let a = self.ss?.attendance();
+            print(a!);
+        }
     }
     
 }
